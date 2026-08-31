@@ -92,3 +92,21 @@ print("After return:")
 
 for item in library.list_available():
     print(item)
+
+from database import Database
+
+
+print("\n--- Database Tests ---")
+
+database = Database("task_3/database.txt")
+
+loaded_items = database.load()
+
+print("Loaded items:")
+
+for item in loaded_items:
+    print(item)
+
+database.save(loaded_items)
+
+print("Database save completed.")
